@@ -4,15 +4,20 @@ Authors -- Maxime Wauthy & Glenn Vanderlinden @Human37
 
 ## Purpose & Architecture
 
-The Fakestream package is developed in order to generate synthetic data using [Faker](https://fakerjs.dev/) and send it to [Segment](https://segment.com), which in turn can dispatch it to final destinations. We have chosen to send it to Segment as Segment can act as a event pipeline from which data can then be distributed towards a number of tools for testing, training and demo applications. One SDK to rule them all if you will.
+The Fakestream package is developed in order to generate synthetic data using [Faker](https://fakerjs.dev/) and send it to [Segment](https://segment.com), which in turn can dispatch it to final destinations. We have chosen to send it to Segment as Segment can act as a event pipeline from which data can then be distributed towards a number of tools for testing, training and demo applications. One SDK to rule them all if you will. 
 
-![Alt text for broken image link](https://i.ibb.co/Yy7bZbN/Measurecamp-Copy-of-Page-1-1.png)
+![Architecture](https://i.ibb.co/Yy7bZbN/Measurecamp-Copy-of-Page-1-1.png)
+
+Out of the box the script will generate event for the following customer journey. To modify see the section on event creation.
+
+![Default customer journey](https://i.ibb.co/p343whR/Screenshot-2023-11-30-at-16-38-18.png)
 
 ## Demo and application documentation
 
-- [Unlocking the Power of Synthetic Data – A short introduction](https://www.human37.com/post/unlocking-the-power-of-synthetic-data-a-short-introduction)
-- [Synthetic data - An introduction to Faker.js](https://www.youtube.com/watch?v=kEnZslyQaS4&list=PL4YD95ENcSNTRAW5k65PDrzzQd2OsJs_c&ab_channel=Human37)
-- [Synthetic data - A practical application](https://website-name.com)
+* [Unlocking the Power of Synthetic Data – A short introduction](https://www.human37.com/post/unlocking-the-power-of-synthetic-data-a-short-introduction)
+* [Synthetic data - An introduction to Faker.js](https://www.youtube.com/watch?v=kEnZslyQaS4&list=PL4YD95ENcSNTRAW5k65PDrzzQd2OsJs_c&ab_channel=Human37)
+* [Synthetic data - A practical application](https://website-name.com)
+
 
 ## Installation
 
@@ -23,30 +28,24 @@ To install the Faker.js library:
 ```sh
 npm install @faker-js/faker --save-dev
 ```
-
 To install the Segment Node library:
-
 ```sh
  npm install @segment/analytics-node
 ```
+## Usage 
 
-## Usage
-
-### Segment write key
+### Segment write key 
 
 Insert your Segment write key.
-
-```sh
+```sh 
 const analytics = new Analytics({
   writeKey: "{{INSERT KEY HERE}}",
 });
 ```
-
 ### User count
 
 Define the number of user you would like to be generated.
-
-```sh
+```sh 
 const numUsers = 10;
 ```
 
@@ -62,7 +61,7 @@ Create events in the templated structure.
     },
     probability: 1.0,
   }
-```
+ ```
 
 Where
 
@@ -87,4 +86,5 @@ function generateUser() {
   };
   return { userId, userTraits };
 }
-```
+ ```
+ 
