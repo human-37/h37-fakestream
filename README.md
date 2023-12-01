@@ -16,8 +16,7 @@ Out of the box the script will generate event for the following customer journey
 
 * [Unlocking the Power of Synthetic Data – A short introduction](https://www.human37.com/post/unlocking-the-power-of-synthetic-data-a-short-introduction)
 * [Synthetic data - An introduction to Faker.js](https://www.youtube.com/watch?v=kEnZslyQaS4&list=PL4YD95ENcSNTRAW5k65PDrzzQd2OsJs_c&ab_channel=Human37)
-* [Synthetic data - A practical application](https://website-name.com)
-
+* [Synthetic data - A practical application](https://www.youtube.com/watch?v=JSyif515NFU&list=PL4YD95ENcSNTRAW5k65PDrzzQd2OsJs_c&index=2&ab_channel=Human37)
 
 ## Installation
 
@@ -32,7 +31,7 @@ To install the Segment Node library:
 ```sh
  npm install @segment/analytics-node
 ```
-## Usage 
+## Configuration
 
 ### Segment write key 
 
@@ -87,4 +86,12 @@ function generateUser() {
   return { userId, userTraits };
 }
  ```
- 
+## Running the script
+
+In your IDE hit run.
+
+In terminal - navigate to the root folder and run:
+```sh
+node FakeStream.js
+ ```
+
