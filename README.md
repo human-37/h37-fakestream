@@ -2,7 +2,7 @@
 
 Authors -- Maxime Wauthy & Glenn Vanderlinden @Human37
 
-![Fakestream logo](https://i.ibb.co/QvFnw0Bd/Screenshot-2025-07-28-at-17-56-12.png)
+<img src="https://i.ibb.co/QvFnw0Bd/Screenshot-2025-07-28-at-17-56-12.png" alt="Fakestream logo" width="400">
 
 ## Purpose & Architecture
 
