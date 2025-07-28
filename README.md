@@ -2,6 +2,8 @@
 
 Authors -- Maxime Wauthy & Glenn Vanderlinden @Human37
 
+![Fakestream logo](https://ibb.co/xqSGTZvH)
+
 ## Purpose & Architecture
 
 The Fakestream package is developed in order to generate synthetic data using [Faker](https://fakerjs.dev/) and send it to [Segment](https://segment.com), which in turn can dispatch it to final destinations. We have chosen to send it to Segment as Segment can act as a event pipeline from which data can then be distributed towards a number of tools for testing, training and demo applications. One SDK to rule them all if you will. 
